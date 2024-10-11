@@ -17,8 +17,13 @@ int main()
 		_cputs("Setting new screen buffer failed");
 		return GetLastError();
 	}
-	char text[] = "this is new text buffer";
+	char text[] = "this is new text buffer\n";
 	if (!WriteConsole(hStdOutNew, text, sizeof(text), &dwWritten, NULL)) {
+		_cputs("Write console 1 failed");
+		return GetLastError();
+	}
+	char K[] = "KKK";
+	if (!WriteConsole(hStdOutNew, K, sizeof(K), &dwWritten, NULL)) {
 		_cputs("Write console 1 failed");
 		return GetLastError();
 	}

@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{d421f1d5-df79-41cc-b676-bd3102e39766}</ProjectGuid>
-    <RootNamespace>CursorPosition</RootNamespace>
+    <ProjectGuid>{2414fbec-b940-41a1-9eb7-3dc188ce6ccb}</ProjectGuid>
+    <RootNamespace>ConsoleSetAttribute</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CursorPosition.cpp" />
+    <ClCompile Include="ConsoleSetAttribute.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

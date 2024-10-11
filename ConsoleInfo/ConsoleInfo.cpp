@@ -10,7 +10,8 @@ int main()
     DWORD dwLength, dwWritten;
     COORD coord;
     CONSOLE_SCREEN_BUFFER_INFO csbi;
-
+    cout << "input any char to change console parameters" << endl;
+    cin >> c;
     hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
     if (hStdOut == INVALID_HANDLE_VALUE) {
         cout << "Get standard handle failed" << endl;
