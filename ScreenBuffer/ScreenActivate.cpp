@@ -10,7 +10,7 @@ int main()
 		_cputs("Creating screen buffer failed");
 		return GetLastError();
 	}
-	hStdOutOld = GetStdHandle(STD_INPUT_HANDLE);
+	hStdOutOld = GetStdHandle(STD_OUTPUT_HANDLE);
 	_cputs("Press any key to set new screen buffer active");
 	getch();
 	if (!SetConsoleActiveScreenBuffer(hStdOutNew)) {
@@ -29,12 +29,13 @@ int main()
 	}
 	getch();
 	if (!SetConsoleActiveScreenBuffer(hStdOutOld)) {
-		_cputs("Setting old screen buffer failed");
+		_cputs("\nSetting old screen buffer failed");
 		return GetLastError();
 	}
-	_cputs("This is old screen buffer");
+	_cputs("\nThis is old screen buffer");
 	CloseHandle(hStdOutNew);
-	_cputs("Press any key to finish");
+	_cputs("\nPress any key to finish");
 	getch();
+	return 0;
 }
 
